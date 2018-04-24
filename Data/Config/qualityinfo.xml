@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ULM-MODIFIED ULM-MODIFIED ULM-MODIFIED -->
+<qualityinfo>
+  <!--Broken Grey-->
+	<quality key="0" color="191919" />
+  <!--Faulty Brown-->
+	<quality key="1" color="808080" />
+  <!--Poor Orange-->
+	<quality key="2" color="7F3300" />
+  <!--Good Yellow-->
+	<quality key="3" color="FF6A00" />
+  <!--Fine Green-->
+	<quality key="4" color="35B200" />
+  <!--Great Blue-->
+	<quality key="5" color="0094FF" />
+  <!--Flawless Magenta-->
+	<quality key="6" color="B200FF" />
+</qualityinfo>

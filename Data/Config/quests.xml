@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+	Quest format description:
+
+	Example: <quest id="quest_BasicSurvival1" name_key="Basic Survival 1/8" subtitle_key="Craft a Stone Axe" description_key="blah" icon="ui_game_symbol_hammer" >
+
+	id = ID used for the quest
+	name_key - localization key for the quest used when displayed in the quest list.
+	subtitle_key = localization key for the sub name used when displayed in the quest details and tracker.
+	description_key = localization key for the description displayed in the description window.
+	offer_key = localization key for the offer window description.
+	icon = icon shown in the quest list and on the tracker.
+	category_key = localization key for the category type (quest,challenge)
+	difficulty = (veryeasy, easy, medium, hard, insane )
+
+	Alternative settings for custom quest creation:
+
+	name - quest name without localization.
+	subtitle - sub name without localization.
+	description - description without localization.
+	offer - offer without localization.
+	group_name - quest chain name without localization.
+	category - category type without localization.
+
+-->
+
+<!-- ULM-MODIFIED ULM-MODIFIED ULM-MODIFIED -->
+<quests>
+	<!-- Basic Survival 1 - Craft a Bedroll /> -->
+	<quest id="quest_BasicSurvival1" group_name_key="quest_BasicSurvival" name_key="quest_BasicSurvival1" subtitle_key="quest_BasicSurvival1_subtitle" description_key="quest_BasicSurvival1_description" icon="ui_game_symbol_map_bed" category_key="quest" difficulty="veryeasy" offer_key="quest_BasicSurvival_offer"><action type="ShowTip" value="tutorialTipQuest02" /><action type="TrackQuest" /><objective type="FetchKeep" id="yuccaFibers" value="30" /><objective type="Craft" id="ulmRope" value="2" /><objective type="Craft" id="bedroll" value="1" /><objective type="BlockPlace" id="bedroll" value="1" /><reward type="Quest" id="quest_BasicSurvival2" /></quest>
+
+	<!-- Basic Survival 2 - Craft a Stone Axe /> -->
+    <quest id="quest_BasicSurvival2" group_name_key="quest_BasicSurvival" name_key="quest_BasicSurvival2" subtitle="Craft a Stone Axe" subtitle_key="quest_BasicSurvival2_subtitle" description_key="quest_BasicSurvival2_description" icon="ui_game_symbol_hammer" category_key="quest" offer_key="quest_BasicSurvival_offer"><objective type="FetchKeep" id="yuccaFibers" value="5" /><objective type="FetchKeep" id="wood" value="2" /><objective type="FetchKeep" id="rockSmall" value="4" /><objective type="Craft" id="ulmRope" value="1" /><objective type="Craft" id="stoneAxe" value="1" /><reward type="Quest" id="quest_BasicSurvival3" /></quest>
+
+	<!-- Basic Survival 3 - Craft Plant Fiber Clothing /> -->
+	<quest id="quest_BasicSurvival3" group_name_key="quest_BasicSurvival" name_key="quest_BasicSurvival3" subtitle_key="quest_BasicSurvival3_subtitle" description_key="quest_BasicSurvival3_description" icon="ui_game_symbol_tailoring" category_key="quest" difficulty="veryeasy"><objective type="FetchKeep" id="yuccaFibers" value="62" /><objective type="Craft" id="ulmRope" value="5" /><objective type="Craft" id="plantFiberShoes" value="1" /><objective type="Craft" id="plantFiberPants" value="1" /><objective type="Craft" id="plantFiberShirt" value="1" /><objective type="Craft" id="plantFiberGloves" value="1" /><objective type="Craft" id="plantFiberHood" value="1" /><reward type="Quest" id="quest_BasicSurvival4" /></quest>
+
+	<!-- Basic Survival 4 - Wear Plant Fiber Clothing /> -->
+	<quest id="quest_BasicSurvival4" group_name_key="quest_BasicSurvival" name_key="quest_BasicSurvival4" subtitle_key="quest_BasicSurvival4_subtitle" description_key="quest_BasicSurvival4_description" icon="ui_game_symbol_shirt" category_key="quest" difficulty="veryeasy">
+		<objective type="Wear" id="plantFiberPants" />
+		<objective type="Wear" id="plantFiberShirt" />
+		<objective type="Wear" id="plantFiberHood" />
+		<objective type="Wear" id="plantFiberShoes" />
+		<objective type="Wear" id="plantFiberGloves" />
+
+		<reward type="Quest" id="quest_BasicSurvival5" />
+    </quest>
+
+	<!-- Basic Survival 5 - Craft a Wooden Club /> -->
+	<quest id="quest_BasicSurvival5" group_name_key="quest_BasicSurvival" name_key="quest_BasicSurvival5" subtitle_key="quest_BasicSurvival5_subtitle" description_key="quest_BasicSurvival5_description" icon="ui_game_symbol_club" category_key="quest" difficulty="veryeasy">
+		<objective type="FetchKeep" id="wood" value="6" />
+		<objective type="Craft" id="clubWood" value="1" />
+
+		<reward type="Quest" id="quest_BasicSurvival6" />
+    </quest>
+
+	<!-- Basic Survival 6 - Craft Bow & Arrows /> -->
+	<quest id="quest_BasicSurvival6" group_name_key="quest_BasicSurvival" name_key="quest_BasicSurvival6" subtitle_key="quest_BasicSurvival6_subtitle" description_key="quest_BasicSurvival6_description" icon="ui_game_symbol_archery" category_key="quest" difficulty="veryeasy"><objective type="FetchKeep" id="wood" value="17" /><objective type="FetchKeep" id="ulmTwigs" value="5" /><objective type="FetchKeep" id="ulmResin" value="1" /><objective type="FetchKeep" id="yuccaFibers" value="4" /><objective type="FetchKeep" id="rockSmall" value="5" /><objective type="FetchKeep" id="feather" value="5" /><objective type="Craft" id="ulmBowString" value="1" /><objective type="Craft" id="woodenBow" value="1" /><objective type="Craft" id="arrow" value="5" /><reward type="Quest" id="quest_BasicSurvival7" /></quest>
+
+	<!-- Basic Survival 7 - Start a Base /> -->
+	<quest id="quest_BasicSurvival7" group_name_key="quest_BasicSurvival" name_key="quest_BasicSurvival7" subtitle_key="quest_BasicSurvival7_subtitle" description_key="quest_BasicSurvival7_description" icon="ui_game_symbol_map_house" category_key="quest" difficulty="veryeasy"><objective type="FetchKeep" id="wood" value="45" /><objective type="FetchKeep" id="ulmResin" value="3" /><objective type="Craft" id="ulmPlanks" value="15" /><objective type="Craft" id="woodFrameBlock" value="3" /><objective type="BlockPlace" id="woodFrameBlock" value="3" /><objective type="BlockUpgrade" id="woodFrameBlock" value="3" /><reward type="Quest" id="quest_BasicSurvival8" /></quest>
+
+	<!-- Basic Survival 8 - Build a Campfire /> -->
+	<quest id="quest_BasicSurvival8" group_name_key="quest_BasicSurvival" name_key="quest_BasicSurvival8" subtitle_key="quest_BasicSurvival8_subtitle" description_key="quest_BasicSurvival8_description" icon="ui_game_symbol_campfire" category_key="quest" difficulty="veryeasy"><objective type="FetchKeep" id="rockSmall" value="8" /><objective type="FetchKeep" id="wood" value="14" /><objective type="Craft" id="ulmTwigs" value="10" /><objective type="Craft" id="campfire" value="1" /><objective type="BlockPlace" id="campfire" value="1" /><reward type="SkillPoints" value="5" /><reward type="ShowTip" value="skillPointTip" stage="aftercomplete" /><reward type="Quest" id="quest_whiteRiverCitizen1" stage="aftercomplete" /></quest>
+
+	<!-- White River Citizen 1 - Journey to Settlement -->
+	<quest id="quest_whiteRiverCitizen1" group_name_key="quest_WhiteRiverCitizen" name_key="quest_WhiteRiverCitizen1" subtitle_key="quest_WhiteRiverCitizen1_subtitle" description_key="quest_WhiteRiverCitizen1_description" icon="ui_game_symbol_map_trader" category_key="quest" difficulty="medium">
+		<objective type="Goto" id="trader" value="5" />
+
+		<reward type="SkillPoints" value="5" />
+    </quest>
+
+	<!-- CHALLENGES -->
+	<quest id="challenge_silenceofthelambs" name_key="challenge_silenceofthelambs" subtitle_key="challenge_silenceofthelambs_subtitle" description_key="challenge_silenceofthelambs_offer" icon="ui_game_symbol_zombie" repeatable="true" category_key="challenge" offer_key="challenge_silenceofthelambs_offer" difficulty="insane">
+		<objective type="Time" value="1200" optional="true" />
+		<objective type="ZombieKill" id="zombieScreamer,zombieScreamerFeral" value="3" />
+
+		<reward type="SkillPoints" value="2" />
+		<reward type="SkillPoints" value="1" optional="true" />
+	</quest>
+
+	<quest id="challenge_drunkanddisorderly" name_key="challenge_drunkanddisorderly" subtitle_key="challenge_drunkanddisorderly_subtitle" description_key="challenge_drunkanddisorderly_offer" icon="ui_game_symbol_zombie" repeatable="true" category_key="challenge" offer_key="challenge_drunkanddisorderly_offer" difficulty="medium">
+		<objective type="Time" value="600" optional="true" />
+		<objective type="ZombieKill" value="2" />
+		<requirement type="Holding" id="" />
+
+		<requirement type="Group" value="OR">
+			<requirement type="Buff" id="Drunk" />
+			<requirement type="Buff" id="SickDrunk" />
+		</requirement>
+
+
+		<reward type="SkillPoints" value="2" />
+		<reward type="SkillPoints" value="1" optional="true" />
+	</quest>
+
+	<quest id="challenge_nurseyoubacktohealth" name_key="challenge_nurseyoubacktohealth" subtitle_key="challenge_nurseyoubacktohealth_subtitle" description_key="challenge_nurseyoubacktohealth_offer" icon="ui_game_symbol_zombie" repeatable="true" category_key="challenge" offer_key="challenge_nurseyoubacktohealth_offer" difficulty="medium">
+
+		<objective type="Time" value="900" optional="true" />
+		<objective type="ZombieKill" id="zombieNurse,zombieNurseFeral" value="3" />
+
+		<reward type="SkillPoints" value="2" />
+		<reward type="SkillPoints" value="1" optional="true" />
+	</quest>
+
+	<quest id="challenge_copanattitude" name_key="challenge_copanattitude" subtitle_key="challenge_copanattitude_subtitle" description_key="challenge_copanattitude_offer" icon="ui_game_symbol_zombie" repeatable="true" category_key="challenge" offer_key="challenge_copanattitude_offer" difficulty="hard">
+		<objective type="Time" value="1500" optional="true" />
+		<objective type="ZombieKill" id="zombieFatCop,zombieFatCopFeral,zombieFatCopFeralRadiated" value="2" />
+
+		<reward type="SkillPoints" value="2" />
+		<reward type="SkillPoints" value="1" optional="true" />
+	</quest>
+
+	<quest id="challenge_dogdaysareover" name_key="challenge_dogdaysareover" subtitle_key="challenge_dogdaysareover_subtitle" description_key="challenge_dogdaysareover_offer" icon="ui_game_symbol_zombie" repeatable="true" category_key="challenge" offer_key="challenge_dogdaysareover_offer" difficulty="hard">
+		<objective type="Time" value="1500" optional="true" />
+		<objective type="ZombieKill" id="animalZombieDog" value="4" />
+
+		<reward type="SkillPoints" value="2" />
+		<reward type="SkillPoints" value="1" optional="true" />
+	</quest>
+
+	<quest id="challenge_itsybitsyspider" name_key="challenge_itsybitsyspider" subtitle_key="challenge_itsybitsyspider_subtitle" description_key="challenge_itsybitsyspider_offer" icon="ui_game_symbol_zombie" repeatable="true" category_key="challenge" offer_key="challenge_itsybitsyspider_offer" difficulty="medium">
+		<objective type="Time" value="900" optional="true" />
+		<objective type="ZombieKill" id="zombieSpider,zombieSpiderFeral,zombieSpiderFeralRadiated" value="3" />
+
+		<reward type="SkillPoints" value="2" />
+		<reward type="SkillPoints" value="1" optional="true" />
+	</quest>
+
+	<quest id="challenge_ladykiller" name_key="challenge_ladykiller" subtitle_key="challenge_ladykiller_subtitle" description_key="challenge_ladykiller_offer" icon="ui_game_symbol_zombie" repeatable="true" category_key="challenge" offer_key="challenge_ladykiller_offer" difficulty="medium">
+		<objective type="Time" value="900" optional="true" />
+		<objective type="ZombieKill" id="zombieArlene,zombieArleneFeral" value="1" />
+		<objective type="ZombieKill" id="zombieDarlene,zombieDarleneFeral" value="1" />
+		<objective type="ZombieKill" id="zombieMarlene,zombieMarleneFeral" value="1" />
+		<objective type="ZombieKill" id="zombieNurse,zombieNurseFeral" value="1" />
+
+		<reward type="SkillPoints" value="2" />
+		<reward type="SkillPoints" value="1" optional="true" />
+	</quest>
+
+
+	<quest id="challenge_maneater" name_key="challenge_maneater" subtitle_key="challenge_maneater_subtitle" description_key="challenge_maneater_offer" icon="ui_game_symbol_zombie" repeatable="true" category_key="challenge" offer_key="challenge_maneater_offer" difficulty="medium">
+		<objective type="Time" value="900" optional="true" />
+		<objective type="ZombieKill" id="zombieBoe,zombieBoeFeral" value="1" />
+		<objective type="ZombieKill" id="zombieJoe,zombieJoeFeral" value="1" />
+		<objective type="ZombieKill" id="zombieMoe,zombieMoeFeral" value="1" />
+		<objective type="ZombieKill" id="zombieYo,zombieYoFeral" value="1" />
+		<objective type="ZombieKill" id="zombieSteve,zombieSteveFeral" value="1" />
+
+		<reward type="SkillPoints" value="2" />
+		<reward type="SkillPoints" value="1" optional="true" />
+	</quest>
+
+	<quest id="challenge_yournothingspecial" name_key="challenge_yournothingspecial" subtitle_key="challenge_yournothingspecial_subtitle" description_key="challenge_yournothingspecial_offer" icon="ui_game_symbol_zombie" repeatable="true" category_key="challenge" offer_key="challenge_yournothingspecial_offer" difficulty="insane">
+		<objective type="Time" value="1800" optional="true" />
+		<objective type="ZombieKill" id="zombieSpider,zombieSpiderFeral,zombieSpiderFeralRadiated" value="1" />
+		<objective type="ZombieKill" id="zombieFatCop,zombieFatCopFeral,zombieFatCopFeralRadiated" value="1" />
+		<objective type="ZombieKill" id="zombieWightFeral,zombieWightFeralRadiated" value="1" />
+		<objective type="ZombieKill" id="zombieScreamer,zombieScreamerFeral" value="1" />
+		<objective type="ZombieKill" id="zombieBurnt" value="1" />
+
+		<reward type="SkillPoints" value="2" />
+		<reward type="SkillPoints" value="1" optional="true" />
+	</quest>
+
+	<quest id="challenge_imalumberjackandimokay" name_key="challenge_imalumberjackandimokay" subtitle_key="challenge_imalumberjackandimokay_subtitle" description_key="challenge_imalumberjackandimokay_offer" icon="ui_game_symbol_zombie" repeatable="true" category_key="challenge" offer_key="challenge_imalumberjackandimokay_offer" difficulty="hard">
+
+		<objective type="Time" value="900" optional="true" />
+		<objective type="ZombieKill" id="zombieSnow,zombieSnowFeral" value="3" />
+
+		<requirement type="Group" id="requirementGroupFireaxe" value="OR">
+			<requirement type="Holding" id="fireaxeIron" />
+			<requirement type="Holding" id="fireaxeSteel" />
+		</requirement>
+
+		<reward type="SkillPoints" value="2" />
+		<reward type="SkillPoints" value="1" optional="true" />
+	</quest>
+
+
+	<quest id="challenge_killthewabbit" name_key="challenge_killthewabbit" subtitle_key="challenge_killthewabbit_subtitle" description_key="challenge_killthewabbit_offer" icon="ui_game_symbol_knife" repeatable="true" category_key="challenge" offer_key="challenge_killthewabbit_offer" difficulty="medium">
+
+		<objective type="AnimalKill" id="animalRabbit" value="5" />
+
+		<requirement type="Group" id="requirementGroupShotgun" value="OR">
+			<requirement type="Holding" id="gunSawedOffPumpShotgun" />
+			<requirement type="Holding" id="gunPumpShotgun" />
+		</requirement>
+
+		<reward type="SkillPoints" value="2" />
+	</quest>
+
+	<quest id="challenge_nailsomechicks" name_key="challenge_nailsomechicks" subtitle_key="challenge_nailsomechicks_subtitle" description_key="challenge_nailsomechicks_offer" icon="ui_game_symbol_knife" repeatable="true" category_key="challenge" offer_key="challenge_nailsomechicks_offer" difficulty="medium">
+		<objective type="AnimalKill" id="animalChicken" value="5" />
+
+		<requirement type="Holding" id="nailgun" />
+
+		<reward type="SkillPoints" value="2" />
+	</quest>
+
+	<quest id="challenge_thatlldopig" name_key="challenge_thatlldopig" subtitle_key="challenge_thatlldopig_subtitle" description_key="challenge_thatlldopig_offer" icon="ui_game_symbol_knife" repeatable="true" category_key="challenge" offer_key="challenge_thatlldopig_offer" difficulty="easy">
+		<objective type="AnimalKill" id="animalBoar" value="5" />
+
+		<reward type="SkillPoints" value="2" />
+	</quest>
+
+	<quest id="challenge_stagparty" name_key="challenge_stagparty" subtitle_key="challenge_stagparty_subtitle" description_key="challenge_stagparty_offer" icon="ui_game_symbol_knife" repeatable="true" category_key="challenge" offer_key="challenge_stagparty_offer" difficulty="easy">
+		<objective type="AnimalKill" id="animalStag" value="5" />
+
+		<reward type="SkillPoints" value="2" />
+	</quest>
+
+	<quest id="challenge_dontfeedthebears" name_key="challenge_dontfeedthebears" subtitle_key="challenge_dontfeedthebears_subtitle" description_key="challenge_dontfeedthebears_offer" icon="ui_game_symbol_knife" repeatable="true" category_key="challenge" offer_key="challenge_dontfeedthebears_offer" difficulty="hard">
+		<objective type="AnimalKill" id="animalBear" value="3" />
+
+
+		<reward type="SkillPoints" value="2" />
+	</quest>
+
+	<quest id="challenge_buythefarm" name_key="challenge_buythefarm" subtitle_key="challenge_buythefarm_subtitle" description_key="challenge_buythefarm_offer" icon="ui_game_symbol_knife" repeatable="true" category_key="challenge" offer_key="challenge_buythefarm_offer" difficulty="medium">
+		<objective type="AnimalKill" id="animalRabbit" value="1" />
+		<objective type="AnimalKill" id="animalChicken" value="1" />
+		<objective type="AnimalKill" id="animalBoar" value="1" />
+		<objective type="AnimalKill" id="animalStag" value="1" />
+		<objective type="AnimalKill" id="animalBear" value="1" />
+
+
+		<reward type="SkillPoints" value="2" />
+	</quest>
+
+	<quest id="treasure_taylor" name_key="treasure_taylor" subtitle_key="treasure_taylor_subtitle" description_key="treasure_taylor_offer" icon="ui_game_symbol_treasure" repeatable="true" category_key="treasure" offer_key="treasure_taylor_offer" difficulty="medium">
+
+		<objective type="TreasureChest" id="treasureChest" value="1000-1750" />
+	</quest>
+
+	<quest id="treasure_nickole" name_key="treasure_nickole" subtitle_key="treasure_nickole_subtitle" description_key="treasure_nickole_offer" icon="ui_game_symbol_treasure" repeatable="true" category_key="treasure" offer_key="treasure_nickole_offer" difficulty="medium">
+
+		<objective type="TreasureChest" id="treasureChest" value="1000-1750" />
+	</quest>
+
+	<quest id="treasure_stephan" name_key="treasure_stephan" subtitle_key="treasure_stephan_subtitle" description_key="treasure_stephan_offer" icon="ui_game_symbol_treasure" repeatable="true" category_key="treasure" offer_key="treasure_stephan_offer" difficulty="medium">
+
+		<objective type="TreasureChest" id="treasureChest" value="1000-1750" />
+	</quest>
+
+	<quest id="treasure_jennifer" name_key="treasure_jennifer" subtitle_key="treasure_jennifer_subtitle" description_key="treasure_jennifer_offer" icon="ui_game_symbol_treasure" repeatable="true" category_key="treasure" offer_key="treasure_jennifer_offer" difficulty="medium">
+
+		<objective type="TreasureChest" id="treasureChest" value="1000-1750" />
+	</quest>
+
+	<quest id="treasure_claude" name_key="treasure_claude" subtitle_key="treasure_claude_subtitle" description_key="treasure_claude_offer" icon="ui_game_symbol_treasure" repeatable="true" category_key="treasure" offer_key="treasure_claude_offer" difficulty="medium">
+
+		<objective type="TreasureChest" id="treasureChest" value="1000-1750" />
+	</quest>
+
+	<quest id="treasure_sarah" name_key="treasure_sarah" subtitle_key="treasure_sarah_subtitle" description_key="treasure_sarah_offer" icon="ui_game_symbol_treasure" repeatable="true" category_key="treasure" offer_key="treasure_sarah_offer" difficulty="medium">
+
+		<objective type="TreasureChest" id="treasureChest" value="1000-1750" />
+	</quest>
+
+	<quest id="treasure_raphael" name_key="treasure_raphael" subtitle_key="treasure_raphael_subtitle" description_key="treasure_raphael_offer" icon="ui_game_symbol_treasure" repeatable="true" category_key="treasure" offer_key="treasure_raphael_offer" difficulty="medium">
+
+		<objective type="TreasureChest" id="treasureChest" value="1000-1750" />
+	</quest>
+
+
+
+<quest id="quest_scrap_ulmTurretBase" name_key="quest_scrap_ulmTurretBase" subtitle_key="quest_scrap_ulmTurretBase_subtitle" description_key="quest_scrap_ulmTurretBase_desc" icon="ui_game_symbol_hammer" repeatable="true" category_key="Item" difficulty="easy" offer_key="quest_scrap_ulmTurretBase_offer"><reward type="Item" id="motionsensor" value="1" /><reward type="Item" id="forgedSteel" value="2" /><reward type="Item" id="ulmBallBearings" value="2" /><reward type="Item" id="shortMetalPipe" value="6" /><reward type="Item" id="scrapPlastics" value="10" /><reward type="Item" id="ulmCircuitboard" value="1" /><reward type="Item" id="ulmLCDScreen" value="1" /><reward type="Item" id="insulator" value="1" /><reward type="Item" id="ulmResistor" value="3" /><reward type="Item" id="ulmSmallElectricMotor" value="3" /><reward type="Item" id="ulmScrapWires" value="5" /><reward type="Item" id="ulmFuse" value="1" /></quest><quest id="quest_scrap_ulmCircuitboard" name_key="quest_scrap_ulmCircuitboard" subtitle_key="quest_scrap_ulmCircuitboard_subtitle" description_key="quest_scrap_ulmCircuitboard_desc" icon="ui_game_symbol_hammer" repeatable="true" category_key="Item" difficulty="easy" offer_key="quest_scrap_ulmCircuitboard_offer"><reward type="Item" id="scrapPlastics" value="5" /><reward type="Item" id="forgedSteel" value="1" /><reward type="Item" id="ulmMicrochip" value="8" /><reward type="Item" id="ulmFuse" value="6" /><reward type="Item" id="ulmTransistor" value="20" /><reward type="Item" id="ulmCapacitors" value="10" /><reward type="Item" id="ulmResistor" value="20" /><reward type="Item" id="ulmScrapWires" value="1" /></quest><quest id="quest_scrap_ulmSolderingIron" name_key="quest_scrap_ulmSolderingIron" subtitle_key="quest_scrap_ulmSolderingIron_subtitle" description_key="quest_scrap_ulmSolderingIron_desc" icon="ui_game_symbol_hammer" repeatable="true" category_key="Item" difficulty="easy" offer_key="quest_scrap_ulmSolderingIron_offer"><reward type="Item" id="ulmPlasticFilament" value="2" /><reward type="Item" id="forgedIron" value="3" /><reward type="Item" id="ulmScrapCopper" value="1" /><reward type="Item" id="ulmScrapWires" value="2" /></quest><quest id="quest_scrap_ulmPlasticFilamentFabricator" name_key="quest_scrap_ulmPlasticFilamentFabricator" subtitle_key="quest_scrap_ulmPlasticFilamentFabricator_subtitle" description_key="quest_scrap_ulmPlasticFilamentFabricator_desc" icon="ui_game_symbol_hammer" repeatable="true" category_key="Item" difficulty="easy" offer_key="quest_scrap_ulmPlasticFilamentFabricator_offer"><reward type="Item" id="forgedSteel" value="8" /><reward type="Item" id="ulmLargeElectricMotor" value="1" /><reward type="Item" id="ulmLCDScreen" value="1" /><reward type="Item" id="ulmCircuitboard" value="1" /><reward type="Item" id="ulmResistor" value="6" /><reward type="Item" id="ulmTransistor" value="12" /><reward type="Item" id="ulmCapacitors" value="6" /><reward type="Item" id="ulmFuse" value="1" /><reward type="Item" id="insulator" value="1" /><reward type="Item" id="ulmScrapWires" value="5" /><reward type="Item" id="ulmElectricSwitch" value="1" /></quest><quest id="quest_scrap_ulm3DPrinter" name_key="quest_scrap_ulm3DPrinter" subtitle_key="quest_scrap_ulm3DPrinter_subtitle" description_key="quest_scrap_ulm3DPrinter_desc" icon="ui_game_symbol_hammer" repeatable="true" category_key="Item" difficulty="easy" offer_key="quest_scrap_ulm3DPrinter_offer"><reward type="Item" id="forgedSteel" value="4" /><reward type="Item" id="ulmSmallElectricMotor" value="3" /><reward type="Item" id="scrapPlastics" value="20" /><reward type="Item" id="ulmLCDScreen" value="1" /><reward type="Item" id="ulmCircuitboard" value="1" /><reward type="Item" id="ulmResistor" value="6" /><reward type="Item" id="ulmTransistor" value="12" /><reward type="Item" id="ulmCapacitors" value="6" /><reward type="Item" id="ulmFuse" value="1" /><reward type="Item" id="insulator" value="1" /><reward type="Item" id="ulmScrapWires" value="8" /><reward type="Item" id="ulmElectricSwitch" value="1" /></quest><quest id="quest_scrap_ulmCNCRouter" name_key="quest_scrap_ulmCNCRouter" subtitle_key="quest_scrap_ulmCNCRouter_subtitle" description_key="quest_scrap_ulmCNCRouter_desc" icon="ui_game_symbol_hammer" repeatable="true" category_key="Item" difficulty="easy" offer_key="quest_scrap_ulmCNCRouter_offer"><reward type="Item" id="forgedSteel" value="10" /><reward type="Item" id="ulmLargeElectricMotor" value="1" /><reward type="Item" id="ulmSmallElectricMotor" value="3" /><reward type="Item" id="scrapPlastics" value="20" /><reward type="Item" id="ulmLCDScreen" value="1" /><reward type="Item" id="ulmCircuitboard" value="3" /><reward type="Item" id="ulmResistor" value="8" /><reward type="Item" id="ulmCapacitors" value="8" /><reward type="Item" id="ulmFuse" value="1" /><reward type="Item" id="insulator" value="1" /><reward type="Item" id="ulmScrapWires" value="8" /><reward type="Item" id="ulmElectricSwitch" value="1" /></quest><quest id="quest_scrap_ulmLens" name_key="quest_scrap_ulmLens" subtitle_key="quest_scrap_ulmLens_subtitle" description_key="quest_scrap_ulmLens_desc" icon="ui_game_symbol_hammer" repeatable="true" category_key="Item" difficulty="easy" offer_key="quest_scrap_ulmLens_offer"><reward type="Item" id="glassCTRSheet" value="2" /><reward type="Item" id="ductTape" value="1" /><reward type="Item" id="scrapPlastics" value="5" /></quest><quest id="quest_scrap_ulmExtensionCable" name_key="quest_scrap_ulmExtensionCable" subtitle_key="quest_scrap_ulmExtensionCable_subtitle" description_key="quest_scrap_ulmExtensionCable_desc" icon="ui_game_symbol_hammer" repeatable="true" category_key="Item" difficulty="easy" offer_key="quest_scrap_ulmExtensionCable_offer"><reward type="Item" id="scrapPlastics" value="2" /><reward type="Item" id="scrapIron" value="1" /><reward type="Item" id="ulmScrapCopper" value="1" /><reward type="Item" id="ulmScrapWires" value="4" /></quest><quest id="quest_scrap_ulmTVRemote" name_key="quest_scrap_ulmTVRemote" subtitle_key="quest_scrap_ulmTVRemote_subtitle" description_key="quest_scrap_ulmTVRemote_desc" icon="ui_game_symbol_hammer" repeatable="true" category_key="Item" difficulty="easy" offer_key="quest_scrap_ulmTVRemote_offer"><reward type="Item" id="scrapPlastics" value="2" /><reward type="Item" id="scrapIron" value="1" /><reward type="Item" id="ulmScrapCopper" value="1" /><reward type="Item" id="ulmScrapWires" value="1" /><reward type="Item" id="ulmLithiumBatteryCells" value="1" /><reward type="Item" id="ulmTransistor" value="1" /><reward type="Item" id="ulmCapacitors" value="2" /><reward type="Item" id="ulmElectricSwitch" value="1" /><reward type="Item" id="ulmDiode" value="1" /></quest><quest id="quest_scrap_ulmCalculator" name_key="quest_scrap_ulmCalculator" subtitle_key="quest_scrap_ulmCalculator_subtitle" description_key="quest_scrap_ulmCalculator_desc" icon="ui_game_symbol_hammer" repeatable="true" category_key="Item" difficulty="easy" offer_key="quest_scrap_ulmCalculator_offer"><reward type="Item" id="scrapPlastics" value="3" /><reward type="Item" id="scrapIron" value="1" /><reward type="Item" id="ulmScrapCopper" value="1" /><reward type="Item" id="ulmScrapWires" value="1" /><reward type="Item" id="ulmLithiumBatteryCells" value="1" /><reward type="Item" id="ulmTransistor" value="1" /><reward type="Item" id="ulmCapacitors" value="1" /></quest><quest id="quest_scrap_ulmCDPlayer" name_key="quest_scrap_ulmCDPlayer" subtitle_key="quest_scrap_ulmCDPlayer_subtitle" description_key="quest_scrap_ulmCDPlayer_desc" icon="ui_game_symbol_hammer" repeatable="true" category_key="Item" difficulty="easy" offer_key="quest_scrap_ulmCDPlayer_offer"><reward type="Item" id="scrapPlastics" value="3" /><reward type="Item" id="scrapIron" value="1" /><reward type="Item" id="ulmScrapCopper" value="1" /><reward type="Item" id="ulmScrapWires" value="1" /><reward type="Item" id="ulmCircuitboard" value="1" /><reward type="Item" id="ulmLithiumBatteryCells" value="1" /><reward type="Item" id="ulmSmallElectricMotor" value="1" /><reward type="Item" id="ulmTransistor" value="3" /><reward type="Item" id="ulmCapacitors" value="3" /><reward type="Item" id="ulmElectricSwitch" value="1" /><reward type="Item" id="ulmDiode" value="1" /></quest><quest id="quest_scrap_ulmMolecularAnalyzer" name_key="quest_scrap_ulmMolecularAnalyzer" subtitle_key="quest_scrap_ulmMolecularAnalyzer_subtitle" description_key="quest_scrap_ulmMolecularAnalyzer_desc" icon="ui_game_symbol_hammer" repeatable="true" category_key="Item" difficulty="easy" offer_key="quest_scrap_ulmMolecularAnalyzer_offer"><reward type="Item" id="scrapPlastics" value="10" /><reward type="Item" id="scrapIron" value="1" /><reward type="Item" id="ulmScrapCopper" value="1" /><reward type="Item" id="ulmScrapWires" value="4" /><reward type="Item" id="ulmCircuitboard" value="1" /><reward type="Item" id="ulmLithiumBatteryCells" value="1" /><reward type="Item" id="ulmSmallElectricMotor" value="2" /><reward type="Item" id="ulmTransistor" value="4" /><reward type="Item" id="ulmCapacitors" value="6" /><reward type="Item" id="ulmElectricSwitch" value="2" /><reward type="Item" id="ulmDiode" value="1" /><reward type="Item" id="ulmFuse" value="1" /><reward type="Item" id="ulmResistor" value="4" /></quest><quest id="quest_scrap_ulmVacuumCleaner" name_key="quest_scrap_ulmVacuumCleaner" subtitle_key="quest_scrap_ulmVacuumCleaner_subtitle" description_key="quest_scrap_ulmVacuumCleaner_desc" icon="ui_game_symbol_hammer" repeatable="true" category_key="Item" difficulty="easy" offer_key="quest_scrap_ulmVacuumCleaner_offer"><reward type="Item" id="scrapPlastics" value="10" /><reward type="Item" id="scrapIron" value="6" /><reward type="Item" id="ulmScrapWires" value="4" /><reward type="Item" id="ulmCircuitboard" value="1" /><reward type="Item" id="ulmLithiumBatteryCells" value="1" /><reward type="Item" id="ulmLargeElectricMotor" value="1" /><reward type="Item" id="ulmTransistor" value="4" /><reward type="Item" id="ulmCapacitors" value="6" /><reward type="Item" id="ulmElectricSwitch" value="1" /><reward type="Item" id="ulmFuse" value="1" /><reward type="Item" id="ulmResistor" value="8" /></quest><quest id="quest_scrap_ulmHandheldVacuumCleaner" name_key="quest_scrap_ulmHandheldVacuumCleaner" subtitle_key="quest_scrap_ulmHandheldVacuumCleaner_subtitle" description_key="quest_scrap_ulmHandheldVacuumCleaner_desc" icon="ui_game_symbol_hammer" repeatable="true" category_key="Item" difficulty="easy" offer_key="quest_scrap_ulmHandheldVacuumCleaner_offer"><reward type="Item" id="scrapPlastics" value="5" /><reward type="Item" id="scrapIron" value="2" /><reward type="Item" id="ulmScrapWires" value="2" /><reward type="Item" id="ulmCircuitboard" value="1" /><reward type="Item" id="ulmLithiumBatteryCells" value="3" /><reward type="Item" id="ulmSmallElectricMotor" value="1" /><reward type="Item" id="ulmTransistor" value="2" /><reward type="Item" id="ulmCapacitors" value="2" /><reward type="Item" id="ulmElectricSwitch" value="1" /><reward type="Item" id="ulmDiode" value="1" /><reward type="Item" id="ulmFuse" value="1" /><reward type="Item" id="ulmResistor" value="2" /></quest><quest id="quest_scrap_ulmOldRadio" name_key="quest_scrap_ulmOldRadio" subtitle_key="quest_scrap_ulmOldRadio_subtitle" description_key="quest_scrap_ulmOldRadio_desc" icon="ui_game_symbol_hammer" repeatable="true" category_key="Item" difficulty="easy" offer_key="quest_scrap_ulmOldRadio_offer"><reward type="Item" id="scrapPlastics" value="6" /><reward type="Item" id="scrapIron" value="3" /><reward type="Item" id="ulmScrapCopper" value="3" /><reward type="Item" id="ulmScrapWires" value="4" /><reward type="Item" id="ulmCircuitboard" value="1" /><reward type="Item" id="ulmLithiumBatteryCells" value="1" /><reward type="Item" id="ulmSpeaker" value="2" /><reward type="Item" id="ulmTransistor" value="2" /><reward type="Item" id="ulmCapacitors" value="5" /><reward type="Item" id="ulmElectricSwitch" value="1" /><reward type="Item" id="ulmDiode" value="1" /><reward type="Item" id="ulmResistor" value="2" /></quest><quest id="quest_scrap_ulmSewingMachine" name_key="quest_scrap_ulmSewingMachine" subtitle_key="quest_scrap_ulmSewingMachine_subtitle" description_key="quest_scrap_ulmSewingMachine_desc" icon="ui_game_symbol_hammer" repeatable="true" category_key="Item" difficulty="easy" offer_key="quest_scrap_ulmSewingMachine_offer"><reward type="Item" id="scrapPlastics" value="8" /><reward type="Item" id="scrapIron" value="7" /><reward type="Item" id="ulmScrapCopper" value="4" /><reward type="Item" id="ulmScrapWires" value="4" /><reward type="Item" id="ulmCircuitboard" value="1" /><reward type="Item" id="ulmLithiumBatteryCells" value="2" /><reward type="Item" id="ulmSmallElectricMotor" value="1" /><reward type="Item" id="ulmTransistor" value="2" /><reward type="Item" id="ulmCapacitors" value="3" /><reward type="Item" id="ulmElectricSwitch" value="1" /><reward type="Item" id="ulmDiode" value="1" /><reward type="Item" id="ulmResistor" value="2" /></quest><quest id="quest_scrap_ulmOldSewingMachine" name_key="quest_scrap_ulmOldSewingMachine" subtitle_key="quest_scrap_ulmOldSewingMachine_subtitle" description_key="quest_scrap_ulmOldSewingMachine_desc" icon="ui_game_symbol_hammer" repeatable="true" category_key="Item" difficulty="easy" offer_key="quest_scrap_ulmOldSewingMachine_offer"><reward type="Item" id="scrapPlastics" value="7" /><reward type="Item" id="scrapIron" value="6" /><reward type="Item" id="ulmScrapCopper" value="3" /><reward type="Item" id="ulmScrapWires" value="4" /><reward type="Item" id="ulmCircuitboard" value="1" /><reward type="Item" id="ulmSmallElectricMotor" value="1" /><reward type="Item" id="ulmTransistor" value="1" /><reward type="Item" id="ulmCapacitors" value="2" /><reward type="Item" id="ulmElectricSwitch" value="1" /><reward type="Item" id="ulmDiode" value="1" /><reward type="Item" id="ulmResistor" value="2" /></quest><quest id="quest_scrap_ulmHeadphones" name_key="quest_scrap_ulmHeadphones" subtitle_key="quest_scrap_ulmHeadphones_subtitle" description_key="quest_scrap_ulmHeadphones_desc" icon="ui_game_symbol_hammer" repeatable="true" category_key="Item" difficulty="easy" offer_key="quest_scrap_ulmHeadphones_offer"><reward type="Item" id="scrapPlastics" value="3" /><reward type="Item" id="scrapIron" value="1" /><reward type="Item" id="ulmScrapWires" value="4" /><reward type="Item" id="ulmCircuitboard" value="1" /><reward type="Item" id="ulmSpeaker" value="2" /></quest><quest id="quest_scrap_ulmLCDMonitor" name_key="quest_scrap_ulmLCDMonitor" subtitle_key="quest_scrap_ulmLCDMonitor_subtitle" description_key="quest_scrap_ulmLCDMonitor_desc" icon="ui_game_symbol_hammer" repeatable="true" category_key="Item" difficulty="easy" offer_key="quest_scrap_ulmLCDMonitor_offer"><reward type="Item" id="scrapPlastics" value="10" /><reward type="Item" id="scrapIron" value="5" /><reward type="Item" id="glassCTRSheet" value="1" /><reward type="Item" id="ulmScrapWires" value="3" /><reward type="Item" id="ulmCircuitboard" value="2" /><reward type="Item" id="ulmTransistor" value="4" /><reward type="Item" id="ulmCapacitors" value="6" /><reward type="Item" id="ulmElectricSwitch" value="1" /><reward type="Item" id="ulmDiode" value="1" /><reward type="Item" id="ulmFuse" value="1" /><reward type="Item" id="ulmResistor" value="4" /></quest><quest id="quest_scrap_ulmBrokenCRTMonitor" name_key="quest_scrap_ulmBrokenCRTMonitor" subtitle_key="quest_scrap_ulmBrokenCRTMonitor_subtitle" description_key="quest_scrap_ulmBrokenCRTMonitor_desc" icon="ui_game_symbol_hammer" repeatable="true" category_key="Item" difficulty="easy" offer_key="quest_scrap_ulmBrokenCRTMonitor_offer"><reward type="Item" id="scrapPlastics" value="14" /><reward type="Item" id="scrapIron" value="17" /><reward type="Item" id="brokenGlass" value="3" /><reward type="Item" id="ulmScrapWires" value="9" /><reward type="Item" id="ulmCircuitboard" value="3" /><reward type="Item" id="ulmTransistor" value="6" /><reward type="Item" id="ulmCapacitors" value="8" /><reward type="Item" id="ulmElectricSwitch" value="1" /><reward type="Item" id="ulmDiode" value="1" /><reward type="Item" id="ulmFuse" value="2" /><reward type="Item" id="ulmResistor" value="6" /></quest><quest id="quest_scrap_ulmBrokenCamera" name_key="quest_scrap_ulmBrokenCamera" subtitle_key="quest_scrap_ulmBrokenCamera_subtitle" description_key="quest_scrap_ulmBrokenCamera_desc" icon="ui_game_symbol_hammer" repeatable="true" category_key="Item" difficulty="easy" offer_key="quest_scrap_ulmBrokenCamera_offer"><reward type="Item" id="scrapPlastics" value="6" /><reward type="Item" id="scrapIron" value="4" /><reward type="Item" id="ulmScrapWires" value="1" /><reward type="Item" id="ulmCircuitboard" value="1" /><reward type="Item" id="ulmTransistor" value="2" /><reward type="Item" id="ulmElectricSwitch" value="1" /><reward type="Item" id="ulmDiode" value="1" /><reward type="Item" id="ulmResistor" value="2" /></quest><quest id="quest_scrap_ulmCarStereo" name_key="quest_scrap_ulmCarStereo" subtitle_key="quest_scrap_ulmCarStereo_subtitle" description_key="quest_scrap_ulmCarStereo_desc" icon="ui_game_symbol_hammer" repeatable="true" category_key="Item" difficulty="easy" offer_key="quest_scrap_ulmCarStereo_offer"><reward type="Item" id="scrapPlastics" value="6" /><reward type="Item" id="scrapIron" value="9" /><reward type="Item" id="ulmScrapWires" value="3" /><reward type="Item" id="ulmCircuitboard" value="1" /><reward type="Item" id="ulmTransistor" value="2" /><reward type="Item" id="ulmCapacitors" value="4" /><reward type="Item" id="ulmElectricSwitch" value="1" /><reward type="Item" id="ulmDiode" value="1" /><reward type="Item" id="ulmFuse" value="2" /><reward type="Item" id="ulmResistor" value="4" /></quest><quest id="quest_scrap_ulmOldConsole" name_key="quest_scrap_ulmOldConsole" subtitle_key="quest_scrap_ulmOldConsole_subtitle" description_key="quest_scrap_ulmOldConsole_desc" icon="ui_game_symbol_hammer" repeatable="true" category_key="Item" difficulty="easy" offer_key="quest_scrap_ulmOldConsole_offer"><reward type="Item" id="scrapPlastics" value="8" /><reward type="Item" id="scrapIron" value="7" /><reward type="Item" id="ulmScrapWires" value="2" /><reward type="Item" id="ulmCircuitboard" value="2" /><reward type="Item" id="ulmTransistor" value="3" /><reward type="Item" id="ulmCapacitors" value="6" /><reward type="Item" id="ulmElectricSwitch" value="1" /><reward type="Item" id="ulmDiode" value="1" /><reward type="Item" id="ulmFuse" value="1" /><reward type="Item" id="ulmResistor" value="3" /></quest><quest id="quest_scrap_ulmOldConsoleControler" name_key="quest_scrap_ulmOldConsoleControler" subtitle_key="quest_scrap_ulmOldConsoleControler_subtitle" description_key="quest_scrap_ulmOldConsoleControler_desc" icon="ui_game_symbol_hammer" repeatable="true" category_key="Item" difficulty="easy" offer_key="quest_scrap_ulmOldConsoleControler_offer"><reward type="Item" id="scrapPlastics" value="3" /><reward type="Item" id="scrapIron" value="1" /><reward type="Item" id="ulmScrapWires" value="2" /><reward type="Item" id="ulmCircuitboard" value="1" /><reward type="Item" id="ulmTransistor" value="1" /><reward type="Item" id="ulmCapacitors" value="2" /></quest><quest id="quest_scrap_ulmOldCassettePlayer" name_key="quest_scrap_ulmOldCassettePlayer" subtitle_key="quest_scrap_ulmOldCassettePlayer_subtitle" description_key="quest_scrap_ulmOldCassettePlayer_desc" icon="ui_game_symbol_hammer" repeatable="true" category_key="Item" difficulty="easy" offer_key="quest_scrap_ulmOldCassettePlayer_offer"><reward type="Item" id="scrapPlastics" value="3" /><reward type="Item" id="scrapIron" value="1" /><reward type="Item" id="ulmScrapWires" value="1" /><reward type="Item" id="ulmCircuitboard" value="1" /><reward type="Item" id="ulmLithiumBatteryCells" value="1" /><reward type="Item" id="ulmTransistor" value="1" /><reward type="Item" id="ulmCapacitors" value="2" /><reward type="Item" id="ulmElectricSwitch" value="1" /><reward type="Item" id="ulmDiode" value="1" /><reward type="Item" id="ulmResistor" value="2" /></quest><quest id="quest_scrap_ulmOldSpeakerBox" name_key="quest_scrap_ulmOldSpeakerBox" subtitle_key="quest_scrap_ulmOldSpeakerBox_subtitle" description_key="quest_scrap_ulmOldSpeakerBox_desc" icon="ui_game_symbol_hammer" repeatable="true" category_key="Item" difficulty="easy" offer_key="quest_scrap_ulmOldSpeakerBox_offer"><reward type="Item" id="scrapPlastics" value="5" /><reward type="Item" id="scrapIron" value="3" /><reward type="Item" id="ulmScrapWires" value="3" /><reward type="Item" id="ulmLithiumBatteryCells" value="1" /><reward type="Item" id="ulmSpeaker" value="3" /><reward type="Item" id="ulmTransistor" value="2" /><reward type="Item" id="ulmCapacitors" value="5" /></quest><quest id="quest_scrap_ulmOldCellPhone" name_key="quest_scrap_ulmOldCellPhone" subtitle_key="quest_scrap_ulmOldCellPhone_subtitle" description_key="quest_scrap_ulmOldCellPhone_desc" icon="ui_game_symbol_hammer" repeatable="true" category_key="Item" difficulty="easy" offer_key="quest_scrap_ulmOldCellPhone_offer"><reward type="Item" id="scrapPlastics" value="2" /><reward type="Item" id="scrapIron" value="1" /><reward type="Item" id="ulmScrapWires" value="1" /></quest><quest id="quest_scrap_ulmClothingIron" name_key="quest_scrap_ulmClothingIron" subtitle_key="quest_scrap_ulmClothingIron_subtitle" description_key="quest_scrap_ulmClothingIron_desc" icon="ui_game_symbol_hammer" repeatable="true" category_key="Item" difficulty="easy" offer_key="quest_scrap_ulmClothingIron_offer"><reward type="Item" id="scrapPlastics" value="7" /><reward type="Item" id="scrapIron" value="20" /><reward type="Item" id="ulmScrapWires" value="3" /><reward type="Item" id="ulmTransistor" value="2" /><reward type="Item" id="ulmCapacitors" value="2" /><reward type="Item" id="ulmElectricSwitch" value="1" /><reward type="Item" id="ulmDiode" value="1" /><reward type="Item" id="ulmFuse" value="1" /></quest><quest id="quest_scrap_ulmSander" name_key="quest_scrap_ulmSander" subtitle_key="quest_scrap_ulmSander_subtitle" description_key="quest_scrap_ulmSander_desc" icon="ui_game_symbol_hammer" repeatable="true" category_key="Item" difficulty="easy" offer_key="quest_scrap_ulmSander_offer"><reward type="Item" id="scrapPlastics" value="4" /><reward type="Item" id="scrapIron" value="5" /><reward type="Item" id="ulmScrapWires" value="2" /><reward type="Item" id="ulmCircuitboard" value="1" /><reward type="Item" id="ulmSmallElectricMotor" value="1" /><reward type="Item" id="ulmTransistor" value="3" /><reward type="Item" id="ulmCapacitors" value="2" /><reward type="Item" id="ulmElectricSwitch" value="1" /><reward type="Item" id="ulmDiode" value="1" /><reward type="Item" id="ulmFuse" value="1" /><reward type="Item" id="ulmResistor" value="2" /></quest><quest id="quest_scrap_ulmCircularSaw" name_key="quest_scrap_ulmCircularSaw" subtitle_key="quest_scrap_ulmCircularSaw_subtitle" description_key="quest_scrap_ulmCircularSaw_desc" icon="ui_game_symbol_hammer" repeatable="true" category_key="Item" difficulty="easy" offer_key="quest_scrap_ulmCircularSaw_offer"><reward type="Item" id="scrapPlastics" value="5" /><reward type="Item" id="scrapIron" value="7" /><reward type="Item" id="ulmScrapWires" value="2" /><reward type="Item" id="ulmCircuitboard" value="1" /><reward type="Item" id="ulmSmallElectricMotor" value="1" /><reward type="Item" id="ulmTransistor" value="4" /><reward type="Item" id="ulmCapacitors" value="5" /><reward type="Item" id="ulmElectricSwitch" value="1" /><reward type="Item" id="ulmDiode" value="1" /><reward type="Item" id="ulmFuse" value="1" /><reward type="Item" id="ulmResistor" value="2" /></quest><quest id="quest_scrap_ulmDiscGrinder" name_key="quest_scrap_ulmDiscGrinder" subtitle_key="quest_scrap_ulmDiscGrinder_subtitle" description_key="quest_scrap_ulmDiscGrinder_desc" icon="ui_game_symbol_hammer" repeatable="true" category_key="Item" difficulty="easy" offer_key="quest_scrap_ulmDiscGrinder_offer"><reward type="Item" id="scrapPlastics" value="5" /><reward type="Item" id="scrapIron" value="7" /><reward type="Item" id="ulmScrapWires" value="2" /><reward type="Item" id="ulmCircuitboard" value="1" /><reward type="Item" id="ulmSmallElectricMotor" value="1" /><reward type="Item" id="ulmTransistor" value="4" /><reward type="Item" id="ulmCapacitors" value="4" /><reward type="Item" id="ulmElectricSwitch" value="1" /><reward type="Item" id="ulmDiode" value="1" /><reward type="Item" id="ulmFuse" value="1" /><reward type="Item" id="ulmResistor" value="3" /></quest><quest id="quest_scrap_ulmHydraulicPress" name_key="quest_scrap_ulmHydraulicPress" subtitle_key="quest_scrap_ulmHydraulicPress_subtitle" description_key="quest_scrap_ulmHydraulicPress_desc" icon="ui_game_symbol_hammer" repeatable="true" category_key="Item" difficulty="easy" offer_key="quest_scrap_ulmHydraulicPress_offer"><reward type="Item" id="scrapPlastics" value="2" /><reward type="Item" id="scrapIron" value="25" /><reward type="Item" id="ulmScrapCopper" value="2" /><reward type="Item" id="ulmScrapWires" value="5" /><reward type="Item" id="ulmCircuitboard" value="1" /><reward type="Item" id="ulmLargeElectricMotor" value="1" /><reward type="Item" id="ulmTransistor" value="4" /><reward type="Item" id="ulmCapacitors" value="5" /><reward type="Item" id="ulmElectricSwitch" value="1" /><reward type="Item" id="ulmDiode" value="1" /><reward type="Item" id="ulmFuse" value="1" /></quest><quest id="quest_scrap_ulmAdvancedWelder" name_key="quest_scrap_ulmAdvancedWelder" subtitle_key="quest_scrap_ulmAdvancedWelder_subtitle" description_key="quest_scrap_ulmAdvancedWelder_desc" icon="ui_game_symbol_hammer" repeatable="true" category_key="Item" difficulty="easy" offer_key="quest_scrap_ulmAdvancedWelder_offer"><reward type="Item" id="scrapPlastics" value="3" /><reward type="Item" id="scrapIron" value="20" /><reward type="Item" id="ulmScrapCopper" value="2" /><reward type="Item" id="ulmScrapWires" value="10" /><reward type="Item" id="ulmCircuitboard" value="2" /><reward type="Item" id="ulmTransistor" value="4" /><reward type="Item" id="ulmCapacitors" value="10" /><reward type="Item" id="ulmElectricSwitch" value="2" /><reward type="Item" id="ulmDiode" value="1" /><reward type="Item" id="ulmFuse" value="1" /><reward type="Item" id="ulmResistor" value="2" /></quest><quest id="quest_scrap_ulm9mmBoxST" name_key="quest_scrap_ulm9mmBoxST" subtitle_key="quest_scrap_ulm9mmBoxST_subtitle" description_key="quest_scrap_ulm9mmBoxST_desc" icon="ui_game_symbol_hammer" repeatable="true" category_key="Item" difficulty="easy" offer_key="quest_scrap_ulm9mmBoxST_offer"><reward type="Item" id="ulm9mmBulletST" value="50" /><reward type="Item" id="paper" value="6" /></quest><quest id="quest_scrap_ulm9mmBoxHP" name_key="quest_scrap_ulm9mmBoxHP" subtitle_key="quest_scrap_ulm9mmBoxHP_subtitle" description_key="quest_scrap_ulm9mmBoxHP_desc" icon="ui_game_symbol_hammer" repeatable="true" category_key="Item" difficulty="easy" offer_key="quest_scrap_ulm9mmBoxHP_offer"><reward type="Item" id="ulm9mmBulletHP" value="50" /><reward type="Item" id="paper" value="6" /></quest><quest id="quest_scrap_ulm10mmBoxST" name_key="quest_scrap_ulm10mmBoxST" subtitle_key="quest_scrap_ulm10mmBoxST_subtitle" description_key="quest_scrap_ulm10mmBoxST_desc" icon="ui_game_symbol_hammer" repeatable="true" category_key="Item" difficulty="easy" offer_key="quest_scrap_ulm10mmBoxST_offer"><reward type="Item" id="ulm10mmBulletST" value="50" /><reward type="Item" id="paper" value="6" /></quest><quest id="quest_scrap_ulm10mmBoxHP" name_key="quest_scrap_ulm10mmBoxHP" subtitle_key="quest_scrap_ulm10mmBoxHP_subtitle" description_key="quest_scrap_ulm10mmBoxHP_desc" icon="ui_game_symbol_hammer" repeatable="true" category_key="Item" difficulty="easy" offer_key="quest_scrap_ulm10mmBoxHP_offer"><reward type="Item" id="ulm10mmBulletHP" value="50" /><reward type="Item" id="paper" value="6" /></quest><quest id="quest_scrap_ulm44MagBoxST" name_key="quest_scrap_ulm44MagBoxST" subtitle_key="quest_scrap_ulm44MagBoxST_subtitle" description_key="quest_scrap_ulm44MagBoxST_desc" icon="ui_game_symbol_hammer" repeatable="true" category_key="Item" difficulty="easy" offer_key="quest_scrap_ulm44MagBoxST_offer"><reward type="Item" id="ulm44MagBulletST" value="50" /><reward type="Item" id="paper" value="6" /></quest><quest id="quest_scrap_ulm44MagBoxHP" name_key="quest_scrap_ulm44MagBoxHP" subtitle_key="quest_scrap_ulm44MagBoxHP_subtitle" description_key="quest_scrap_ulm44MagBoxHP_desc" icon="ui_game_symbol_hammer" repeatable="true" category_key="Item" difficulty="easy" offer_key="quest_scrap_ulm44MagBoxHP_offer"><reward type="Item" id="ulm44MagBulletHP" value="50" /><reward type="Item" id="paper" value="6" /></quest><quest id="quest_scrap_ulm357MagBoxST" name_key="quest_scrap_ulm357MagBoxST" subtitle_key="quest_scrap_ulm357MagBoxST_subtitle" description_key="quest_scrap_ulm357MagBoxST_desc" icon="ui_game_symbol_hammer" repeatable="true" category_key="Item" difficulty="easy" offer_key="quest_scrap_ulm357MagBoxST_offer"><reward type="Item" id="ulm357BulletST" value="50" /><reward type="Item" id="paper" value="6" /></quest><quest id="quest_scrap_ulm357MagBoxHP" name_key="quest_scrap_ulm357MagBoxHP" subtitle_key="quest_scrap_ulm357MagBoxHP_subtitle" description_key="quest_scrap_ulm357MagBoxHP_desc" icon="ui_game_symbol_hammer" repeatable="true" category_key="Item" difficulty="easy" offer_key="quest_scrap_ulm357MagBoxHP_offer"><reward type="Item" id="ulm357BulletHP" value="50" /><reward type="Item" id="paper" value="6" /></quest><quest id="quest_scrap_ulm762mmBoxST" name_key="quest_scrap_ulm762mmBoxST" subtitle_key="quest_scrap_ulm762mmBoxST_subtitle" description_key="quest_scrap_ulm762mmBoxST_desc" icon="ui_game_symbol_hammer" repeatable="true" category_key="Item" difficulty="easy" offer_key="quest_scrap_ulm762mmBoxST_offer"><reward type="Item" id="ulm762mmBulletST" value="50" /><reward type="Item" id="paper" value="6" /></quest><quest id="quest_scrap_ulm762mmBoxHP" name_key="quest_scrap_ulm762mmBoxHP" subtitle_key="quest_scrap_ulm762mmBoxHP_subtitle" description_key="quest_scrap_ulm762mmBoxHP_desc" icon="ui_game_symbol_hammer" repeatable="true" category_key="Item" difficulty="easy" offer_key="quest_scrap_ulm762mmBoxHP_offer"><reward type="Item" id="ulm762mmBulletHP" value="50" /><reward type="Item" id="paper" value="6" /></quest><quest id="quest_scrap_ulmShellBox" name_key="quest_scrap_ulmShellBox" subtitle_key="quest_scrap_ulmShellBox_subtitle" description_key="quest_scrap_ulmShellBox_desc" icon="ui_game_symbol_hammer" repeatable="true" category_key="Item" difficulty="easy" offer_key="quest_scrap_ulmShellBox_offer"><reward type="Item" id="shotgunShell" value="50" /><reward type="Item" id="paper" value="6" /></quest><quest id="quest_scrap_ulmSlugBox" name_key="quest_scrap_ulmSlugBox" subtitle_key="quest_scrap_ulmSlugBox_subtitle" description_key="quest_scrap_ulmSlugBox_desc" icon="ui_game_symbol_hammer" repeatable="true" category_key="Item" difficulty="easy" offer_key="quest_scrap_ulmSlugBox_offer"><reward type="Item" id="shotgunSlug" value="50" /><reward type="Item" id="paper" value="6" /></quest><quest id="quest_scrap_ulmNailBox" name_key="quest_scrap_ulmNailBox" subtitle_key="quest_scrap_ulmNailBox_subtitle" description_key="quest_scrap_ulmNailBox_desc" icon="ui_game_symbol_hammer" repeatable="true" category_key="Item" difficulty="easy" offer_key="quest_scrap_ulmNailBox_offer"><reward type="Item" id="nail" value="50" /><reward type="Item" id="paper" value="6" /></quest><quest id="quest_scrap_ulmScrewBox" name_key="quest_scrap_ulmScrewBox" subtitle_key="quest_scrap_ulmScrewBox_subtitle" description_key="quest_scrap_ulmScrewBox_desc" icon="ui_game_symbol_hammer" repeatable="true" category_key="Item" difficulty="easy" offer_key="quest_scrap_ulmScrewBox_offer"><reward type="Item" id="ulmScrews" value="50" /><reward type="Item" id="paper" value="6" /></quest><quest id="quest_scrap_ulmMREBox" name_key="quest_scrap_ulmMREBox" subtitle_key="quest_scrap_ulmMREBox_subtitle" description_key="quest_scrap_ulmMREBox_desc" icon="ui_game_symbol_hammer" repeatable="true" category_key="Item" difficulty="easy" offer_key="quest_scrap_ulmMREBox_offer"><reward type="Item" id="ulmMRE" value="10" /></quest><quest id="quest_scrap_ulmCigarBox" name_key="quest_scrap_ulmCigarBox" subtitle_key="quest_scrap_ulmCigarBox_subtitle" description_key="quest_scrap_ulmCigarBox_desc" icon="ui_game_symbol_hammer" repeatable="true" category_key="Item" difficulty="easy" offer_key="quest_scrap_ulmCigarBox_offer"><reward type="Item" id="cigar" value="4" /><reward type="Item" id="ulmCardboard" value="1" /></quest><quest id="quest_scrap_ulmSmallHeadphones" name_key="quest_scrap_ulmSmallHeadphones" subtitle_key="quest_scrap_ulmSmallHeadphones_subtitle" description_key="quest_scrap_ulmSmallHeadphones_desc" icon="ui_game_symbol_hammer" repeatable="true" category_key="Item" difficulty="easy" offer_key="quest_scrap_ulmSmallHeadphones_offer"><reward type="Item" id="ulmScrapWires" value="1" /><reward type="Item" id="ulmScrapRubber" value="1" /></quest><quest id="treasure_elliannia" name_key="treasure_elliannia" subtitle_key="treasure_elliannia_subtitle" description_key="treasure_elliannia_offer" icon="ui_game_symbol_treasure" repeatable="true" category_key="treasure" offer_key="treasure_elliannia_offer" difficulty="medium"><objective type="TreasureChest" id="ulmEllianniasTreasure" value="1000-1750" /></quest></quests>
